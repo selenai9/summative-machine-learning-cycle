@@ -1,0 +1,16 @@
+.git
+.github
+notebook
+results
+tools
+scripts
+__pycache__
+*.pyc
+.venv
+venv
+.ipynb_checkpoints
+data/app.db
+data/uploads
+data/retrain_demo.zip
+heart_data
+outputs

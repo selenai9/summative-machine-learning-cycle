@@ -1,0 +1,18 @@
+# Render Blueprint: deploys the API and the UI from this GitHub repo (both as Docker services).
+# After the first deploy, set API_URL on the UI service to the public URL of the API service.
+services:
+  - type: web
+    name: heart-sound-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+
+  - type: web
+    name: heart-sound-ui
+    runtime: docker
+    dockerfilePath: ./Dockerfile.ui
+    plan: free
+    envVars:
+      - key: API_URL
+        value: https://heart-sound-api.onrender.com   # change to your API's real URL

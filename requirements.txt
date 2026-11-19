@@ -1,0 +1,11 @@
+# API + training + retraining (installed in the API Docker image)
+tensorflow-cpu==2.21.0
+librosa>=0.10
+soundfile>=0.12
+scipy
+numpy
+pandas
+scikit-learn
+fastapi
+uvicorn[standard]
+python-multipart

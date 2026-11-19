@@ -1,0 +1,186 @@
+{
+  "model_name": "Optimized CNN",
+  "created": "2026-11-18T21:48:59+00:00",
+  "clip_seconds": 5,
+  "sample_rate": 2000,
+  "input_shape": [
+    40,
+    251,
+    1
+  ],
+  "n_recordings": {
+    "train": 2268,
+    "val": 486,
+    "test": 486
+  },
+  "threshold": 0.6426151990890503,
+  "validation": {
+    "threshold": 0.6426151990890503,
+    "accuracy": 0.8580246913580247,
+    "precision": 0.6115107913669064,
+    "recall": 0.85,
+    "specificity": 0.8601036269430051,
+    "f1": 0.7112970711297071,
+    "roc_auc": 0.9472538860103628,
+    "pr_auc": 0.8441552478296414,
+    "tn": 332,
+    "fp": 54,
+    "fn": 15,
+    "tp": 85
+  },
+  "test": {
+    "threshold": 0.6426151990890503,
+    "accuracy": 0.845679012345679,
+    "precision": 0.5833333333333334,
+    "recall": 0.8484848484848485,
+    "specificity": 0.8449612403100775,
+    "f1": 0.691358024691358,
+    "roc_auc": 0.9362357424372928,
+    "pr_auc": 0.7755341721117026,
+    "tn": 327,
+    "fp": 60,
+    "fn": 15,
+    "tp": 84
+  },
+  "test_per_source": [
+    {
+      "source": "a",
+      "recordings": 62,
+      "abnormal": 44,
+      "roc_auc": 0.614,
+      "recall": 0.955,
+      "specificity": 0.167
+    },
+    {
+      "source": "b",
+      "recordings": 73,
+      "abnormal": 15,
+      "roc_auc": 0.359,
+      "recall": 0.467,
+      "specificity": 0.31
+    },
+    {
+      "source": "c",
+      "recordings": 5,
+      "abnormal": 4,
+      "roc_auc": 0.25,
+      "recall": 0.75,
+      "specificity": 0.0
+    },
+    {
+      "source": "d",
+      "recordings": 8,
+      "abnormal": 4,
+      "roc_auc": 0.812,
+      "recall": 0.75,
+      "specificity": 0.5
+    },
+    {
+      "source": "e",
+      "recordings": 321,
+      "abnormal": 27,
+      "roc_auc": 1.0,
+      "recall": 1.0,
+      "specificity": 0.993
+    },
+    {
+      "source": "f",
+      "recordings": 17,
+      "abnormal": 5,
+      "roc_auc": 0.867,
+      "recall": 0.4,
+      "specificity": 1.0
+    }
+  ],
+  "test_by_quality": [
+    {
+      "group": "good quality",
+      "recordings": 424,
+      "roc_auc": 0.941,
+      "recall": 0.838,
+      "specificity": 0.863
+    },
+    {
+      "group": "poor quality",
+      "recordings": 62,
+      "roc_auc": 0.902,
+      "recall": 0.895,
+      "specificity": 0.698
+    }
+  ],
+  "baselines_validation": {
+    "Majority baseline": {
+      "threshold": 0.5,
+      "accuracy": 0.7942386831275721,
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "pr_auc": 0.205761316872428,
+      "tn": 386,
+      "fp": 0,
+      "fn": 100,
+      "tp": 0
+    },
+    "Logistic regression": {
+      "threshold": 0.5,
+      "accuracy": 0.8065843621399177,
+      "precision": 0.5178571428571429,
+      "recall": 0.87,
+      "specificity": 0.7901554404145078,
+      "f1": 0.6492537313432836,
+      "roc_auc": 0.9001554404145078,
+      "pr_auc": 0.6088711595068653,
+      "tn": 305,
+      "fp": 81,
+      "fn": 13,
+      "tp": 87
+    },
+    "Random forest": {
+      "threshold": 0.5,
+      "accuracy": 0.9012345679012346,
+      "precision": 0.7203389830508474,
+      "recall": 0.85,
+      "specificity": 0.9145077720207254,
+      "f1": 0.7798165137614679,
+      "roc_auc": 0.9607253886010364,
+      "pr_auc": 0.8661485040176801,
+      "tn": 353,
+      "fp": 33,
+      "fn": 15,
+      "tp": 85
+    }
+  },
+  "cnn_validation_at_0.5": {
+    "Plain CNN": {
+      "threshold": 0.5,
+      "accuracy": 0.897119341563786,
+      "precision": 0.8289473684210527,
+      "recall": 0.63,
+      "specificity": 0.966321243523316,
+      "f1": 0.7159090909090909,
+      "roc_auc": 0.9457253886010363,
+      "pr_auc": 0.8448134413557442,
+      "tn": 373,
+      "fp": 13,
+      "fn": 37,
+      "tp": 63
+    },
+    "Optimized CNN": {
+      "threshold": 0.5,
+      "accuracy": 0.7921810699588477,
+      "precision": 0.4975124378109453,
+      "recall": 1.0,
+      "specificity": 0.7383419689119171,
+      "f1": 0.6644518272425249,
+      "roc_auc": 0.9472538860103628,
+      "pr_auc": 0.8441552478296414,
+      "tn": 285,
+      "fp": 101,
+      "fn": 0,
+      "tp": 100
+    }
+  },
+  "current_version": 0
+}

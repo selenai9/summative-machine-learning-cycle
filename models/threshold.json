@@ -1,0 +1,6 @@
+{
+  "threshold": 0.6426151990890503,
+  "min_recall": 0.85,
+  "chosen_on": "validation, recording level",
+  "version": 0
+}

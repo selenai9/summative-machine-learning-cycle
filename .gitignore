@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.env
+# runtime files created by the API
+data/app.db
+data/uploads/
+models/archive/
+models/*.tmp.keras
+results/*.csv
+results/*_stats*.csv
+.DS_Store
+# downloaded dataset and notebook scratch space (hundreds of MB, never commit)
+heart_data/
+outputs/

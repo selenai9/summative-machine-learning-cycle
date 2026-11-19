@@ -1,0 +1,10 @@
+# Streamlit UI (installed in the UI Docker image; no TensorFlow needed)
+streamlit>=1.30
+requests
+matplotlib>=3.7
+numpy
+pandas
+scikit-learn
+librosa>=0.10
+soundfile>=0.12
+scipy
