@@ -148,7 +148,7 @@ locust -f locustfile.py --host http://localhost:8080          # open http://loca
 docker compose -f docker-compose.scale.yml down
 ```
 
-**Results** (machine: `TODO: processor and RAM`; Docker Desktop with 12 CPUs and 3.75 GiB memory). Raw files are in `results/`.
+**Results** (machine: HP Envy x360 laptop, Intel Core 5 120U (10 cores, 12 logical processors), 8 GB RAM, Windows 11 Pro; Docker Desktop with 12 CPUs and 3.75 GiB memory). Raw files are in `results/`.
 
 | Containers | Requests | Failures | Requests/s | Median (ms) | Average (ms) | 95th percentile (ms) |
 |---|---|---|---|---|---|---|
