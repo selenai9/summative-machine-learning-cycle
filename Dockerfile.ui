@@ -9,6 +9,7 @@ RUN pip install --no-cache-dir -r requirements-ui.txt
 
 COPY src ./src
 COPY ui ./ui
+COPY .streamlit ./.streamlit
 COPY data/features.csv ./data/features.csv
 
 ENV PYTHONUNBUFFERED=1 \
