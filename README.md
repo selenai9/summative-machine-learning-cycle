@@ -158,6 +158,18 @@ docker compose -f docker-compose.scale.yml down
 
 More containers raised throughput (13.5 to 25.9 requests per second) and cut response times (median 1300 ms to 210 ms, 95th percentile 5600 ms to 610 ms). Throughput roughly doubles with 3 containers instead of tripling because all containers share the same laptop CPU, so one machine cannot scale linearly. Each row is a single 60-second run, so small differences should not be over-read.
 
+**Second set of runs, with Locust screenshots.** I repeated the test later the same day through the Locust web page (40 users, spawn rate 10 per second, about 2.5 minutes per run, 0 failures after a warm-up). The laptop was busier this time (Chrome, VS Code and Docker open, little free RAM), so the numbers are slower than the table above. Screenshots and the downloaded Locust CSV files are in `results/locust_ui/`.
+
+| Containers | Requests | Failures | Requests/s | Median (ms) | Average (ms) | 95th percentile (ms) |
+|---|---|---|---|---|---|---|
+| 1 | 1192 | 0 | 7.7 | 3000 | 3748 | 8200 |
+| 2 | 2960 | 0 | 17.7 | 890 | 987 | 1900 |
+| 3 | 2914 | 0 | 17.2 | 750 | 1039 | 3300 |
+
+Going from 1 to 2 containers more than doubled throughput (7.7 to 17.7 requests per second) and cut the median from 3000 ms to 890 ms. A third container did not help in this set: throughput stayed about the same (17.2 requests per second) and the 95th percentile was worse (3300 ms against 1900 ms). The first table showed a gain from 3 containers, so the two sets disagree on that point. Both sets ran on one laptop, which also runs Locust and nginx, so CPU and memory are shared and the result depends on how busy the machine is. The honest conclusion is that 2 containers clearly help on this machine and a third gives no reliable extra gain.
+
+**Warm-up failures:** the first 3-container attempt in this second set had 662 failed requests out of 3201 (21%), all `502 Bad Gateway`, all within the first 22 seconds. nginx was sending requests before the three API containers had finished loading TensorFlow. After they were ready there were no failures, and the rerun above (started after all three containers were serving requests) had 0 failures. Wait for all API containers to be ready before starting a load test.
+
 **Note on an earlier run:** the first 3-container run had 22 failed requests out of 679 (3.2%), all "connection forcibly closed" errors reported by Locust on Windows, with a worst response time of 30 s (`results/run1_flood_3_containers_stats.csv`). nginx logged no errors during that test, and the rerun with identical settings had 0 failures. The likely cause is the connection between Windows and Docker Desktop, but this was not proven.
 
 ## 7. Deployment (Render)
