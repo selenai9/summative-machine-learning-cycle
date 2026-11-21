@@ -8,9 +8,9 @@ It covers data acquisition, preprocessing, model training and evaluation, a pred
 | | |
 |---|---|
 | **Video demo (YouTube)** | `TODO: paste the YouTube link here` |
-| **Live UI** | `TODO: https://your-ui.onrender.com` |
-| **Live API docs** | `TODO: https://your-api.onrender.com/docs` |
-| **GitHub repository** | `TODO: https://github.com/<you>/summative-machine-learning-cycle` |
+| **Live UI** | <https://heart-sound-ui.onrender.com> |
+| **Live API docs** | <https://heart-sound-api.onrender.com/docs> |
+| **GitHub repository** | <https://github.com/selenai9/summative-machine-learning-cycle> |
 
 ## 1. Problem and data
 
