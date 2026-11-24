@@ -7,7 +7,7 @@ It covers data acquisition, preprocessing, model training and evaluation, a pred
 
 | | |
 |---|---|
-| **Video demo (YouTube)** | `https://youtu.be/YThzkhz27IA` |
+| **Video demo (YouTube)** | https://youtu.be/YThzkhz27IA |
 | **Live UI** | <https://heart-sound-ui.onrender.com> |
 | **Live API docs** | <https://heart-sound-api.onrender.com/docs> |
 | **GitHub repository** | <https://github.com/selenai9/summative-machine-learning-cycle> |
