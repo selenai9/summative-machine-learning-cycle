@@ -43,7 +43,7 @@ async def lifespan(app):
 app = FastAPI(title="Heart Sound Classifier API", version="1.0", lifespan=lifespan)
 
 
-# ------------------------------------------------------------------ helpers
+# helpers
 def _safe_name(name):
     return re.sub(r"[^A-Za-z0-9._-]", "_", Path(name or "file.wav").name)[:80]
 
@@ -83,7 +83,7 @@ def _maybe_auto_retrain():
     return False
 
 
-# ---------------------------------------------------------------- endpoints
+# endpoints
 @app.get("/health")
 def health():
     """Uptime and status (the UI shows this as 'model uptime')."""
